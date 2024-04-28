@@ -89,6 +89,7 @@ def evaluate_model(model, vectorizer, test_data, mlb):
             text = sentence.get('text')
             if text:
                 X_test.append(text)
+                
 
     X_test_vectorized = vectorizer.transform(X_test)
 

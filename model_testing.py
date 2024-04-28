@@ -383,6 +383,7 @@ def predict_opinions(category_model, polarity_model, target_model, from_model, t
             if text:
                 # Sentiment analysis using VADER
                 sentiment_scores = sid.polarity_scores(text)
+
                 # Determine sentiment polarity
                 sentiment_polarity = 'neutral'
                 if sentiment_scores['compound'] > 0.05:
@@ -411,8 +412,6 @@ def predict_opinions(category_model, polarity_model, target_model, from_model, t
                 text_lower = text.lower()
                 from_pred = text_lower.find(target_lower)
                 to_pred = from_pred + len(target_lower) - 1
-
-
 
                 # Handle case where target word is not found
                 if from_pred == -1:

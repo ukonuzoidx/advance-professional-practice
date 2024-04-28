@@ -52,6 +52,7 @@ import xml.etree.ElementTree as ET
 def parse_xml(file_path):
     """
     Parses XML file containing review data and returns a list of dictionaries,
+
     each representing a review with its sentences and opinions.
     """
     reviews = []
@@ -93,6 +94,6 @@ def parse_xml(file_path):
 
 def calculate_from_to(sentence, target_word):
     start_index = sentence.find(target_word)
-    end_index = start_index + len(target_word) - 1
+    end_index = start_index + len(target_word)
     
     return start_index, end_index

@@ -208,6 +208,7 @@ def train_model(data, vectorizer):
     targets = []
     from_positions = []
     to_positions = []
+    
 
     for entry in data:
         sentences = entry.get('sentences', [])

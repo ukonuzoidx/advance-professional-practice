@@ -12,7 +12,6 @@ def sleep_loading_bar(text):
     print(text)
 
 
-
 def main():
 
     # Parse the data
@@ -113,6 +112,7 @@ def main():
     print("Total reviews predicted:", len(predictions))
     # how many test datasets was predicted
     print("Total test datasets predicted:", len(test_data))
+    
 
 
 
